@@ -1,4 +1,4 @@
-# **Example of using the Saga pattern implementation <sub><sub>[in Russian](https://github.com/MaxZhukoff/saga-examples/tree/master/simple-saga-demo)</sub></sub>**
+# **Example of using the Saga pattern implementation <sup>[in Russian](https://github.com/MaxZhukoff/saga-examples/tree/master/simple-saga-demo)</sup>**
 
 ## **Introduction to the Sagas**
 
