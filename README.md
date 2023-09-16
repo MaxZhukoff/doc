@@ -564,23 +564,22 @@ Second, you need to create a subscriber for events from `SagaStepAggregate`. [At
 An example for `SagaStepLaunchedEvent`:
 ```kotlin
 subscriptionsManager.createSubscriber(SagaStepAggregate::class, "local-sagas::sagas-projections") {
-        `when`(SagaStepLaunchedEvent::class) { event ->
-            val sagaName = event.sagaName
-            val stepId = event.sagaStepId.toString()
-            val stepName = event.stepName
+    `when`(SagaStepLaunchedEvent::class) { event ->
+        val sagaName = event.sagaName
+        val stepId = event.sagaStepId.toString()
+        val stepName = event.stepName
 
-            val saga = Saga(event.sagaInstanceId.toString(), sagaName)
+        val saga = Saga(event.sagaInstanceId.toString(), sagaName)
 
-            val newStep = SagaStep(
-                stepName,
-                stepId,
-                event.prevSteps.map { it.toString() }.toSet(),
-                event.createdAt.toString()
-            )
-            insertNextStep(saga.sagaSteps, newStep)
+        val newStep = SagaStep(
+            stepName,
+            stepId,
+            event.prevSteps.map { it.toString() }.toSet(),
+            event.createdAt.toString()
+        )
+        insertNextStep(saga.sagaSteps, newStep)
 
-            sagaProjectionsRepository.save(saga)
-        }
+        sagaProjectionsRepository.save(saga)
     }
 }
 ```
