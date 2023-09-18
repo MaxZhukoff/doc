@@ -408,7 +408,7 @@ The user Aggregate can be created. We can add both payments methods and delivery
 Also, you can change the password of the user there. Then we have UserPaymentsViewDomain that is responsible for creating payment projection.
 It catches the events emitted by UserAggregate, and creates projection based on them.
 
-# **Example of using the Saga pattern implementation <small><sup>[in Russian](https://github.com/MaxZhukoff/saga-examples/tree/master/.doc)</sub>**</small>
+# **Example of using the Saga pattern implementation <sup>[<small>in Russian</small>](https://github.com/MaxZhukoff/saga-examples/tree/master/.doc)</sub>**
 
 ## **Introduction to the Sagas**
 
